@@ -8,7 +8,9 @@ compiler: gcc
 script:
 - export CXX="/usr/bin/g++-4.8"
 - $CXX --version
-- "./setup.sh"
+- "tls-testsuite/setup.sh"
+- "tls-testsuite/server_testsuite.sh"
+
 
 addons:
   apt:
