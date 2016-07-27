@@ -1,11 +1,13 @@
 os:
 - linux
 
-language: java
+language: cpp
+
+compiler: gcc
 
 script:
 - export CXX="/usr/bin/g++-4.8"
-- export CC="/usr/bin/gcc-4.8"
+- $CXX --version
 - "./setup.sh"
 
 addons:
