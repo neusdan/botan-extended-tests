@@ -1,0 +1,9 @@
+language: java
+script:
+- "./setup.sh"
+os:
+- linux
+notifications:
+  email:
+    recipients:
+    - daniel@neus-online.eu
