@@ -17,7 +17,8 @@ git checkout .
 git pull
 patch src/cli/tls_server.cpp ../misc/tls_server.patch
 
-./configure.py --with-sanitizers --disable-shared --debug-mode --with-bzip2 --with-lzma --with-openssl --with-sqlite --with-zlib
+export ASAN_OPTIONS=check_initialization_order=true
+./configure.py --with-sanitizers --disable-shared --with-debug-info --with-bzip2 --with-lzma --with-sqlite --with-zlib
 make -j4
 
 cd ..
