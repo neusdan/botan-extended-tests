@@ -7,3 +7,15 @@ notifications:
   email:
     recipients:
     - daniel@neus-online.eu
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+    - libssl-dev
+    - libsqlite3-dev
+    - zlib1g-dev
+    - libbz2-dev
+    - liblzma-dev
