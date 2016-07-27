@@ -18,7 +18,7 @@ git pull
 patch src/cli/tls_server.cpp ../misc/tls_server.patch
 
 export ASAN_OPTIONS=check_initialization_order=true
-./configure.py --with-sanitizers --disable-shared --with-debug-info --with-bzip2 --with-lzma --with-sqlite --with-zlib
+./configure.py --with-sanitizers --disable-shared --with-debug-info --with-bzip2 --with-lzma --with-sqlite --with-zlib --cc="$CC" --cc-bin="$CXX"
 make -j4
 
 cd ..
